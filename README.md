@@ -3,8 +3,9 @@
 ## Pre-Requisites ##
 * node
 
-## Setup for Development ##
+## Client Setup for Development ##
 ```
+cd client/
 npm install
 npm run build
 npm run start
