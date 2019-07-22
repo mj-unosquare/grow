@@ -14,7 +14,7 @@ export const HomeLayout = styled.div`
     max-width: 128px;
     flex: 0 0 92%;
   }
-  button {
+  a {
     margin-top: 10%;
     font-size: 1.5em;
     padding: 15px;
@@ -22,6 +22,7 @@ export const HomeLayout = styled.div`
     color: white;
     border-radius: 10px;
     border: none;
+    text-decoration: none;
     @media (min-width: ${Theme.mediaQuery.large}) {
       margin-top: 5%;
     }
