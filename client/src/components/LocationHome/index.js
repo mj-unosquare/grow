@@ -16,6 +16,7 @@ export const LocationHome = ({ locations }) => {
               id={location.id}
               name={location.name}
               description={location.description}
+              imageurl={location.imageurl}
               key={location.id}
             />
           );

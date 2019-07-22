@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Theme } from "../../theme";
+import { Theme } from "Theme/theme";
 
 export const HomeLayout = styled.div`
   margin-top: 20%;

@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { Theme } from "../../theme";
+import { Theme } from "Theme/theme";
 
 export const LocationHomeLayout = styled.div`
-  display: grid;
-  grid-gap: 10px;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
 `;

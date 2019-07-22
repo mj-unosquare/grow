@@ -19,7 +19,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpeg|jpg|gif)$/,
         use: ["file-loader"]
       },
       {
@@ -39,7 +39,9 @@ module.exports = {
     alias: {
       Components: path.resolve(__dirname, "src/components/"),
       Constants: path.resolve(__dirname, "src/constants/"),
-      Services: path.resolve(__dirname, "src/services/")
+      Services: path.resolve(__dirname, "src/services/"),
+      Images: path.resolve(__dirname, "src/img/"),
+      Theme: path.resolve(__dirname, "src/")
     }
   }
 };
