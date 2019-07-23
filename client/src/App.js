@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Router } from "@reach/router";
 import { createGlobalStyle } from "styled-components";
+import Header from "Components/Header";
 import Home from "Components/Home";
 import LocationHome from "Components/LocationHome";
 import routes from "Constants/routes";
@@ -10,6 +11,7 @@ const App = () => {
   return (
     <Fragment>
       <GlobalStyle />
+      <Header />
       <Router>
         <Home path={routes.HOME} />
         <LocationHome path={routes.LOCATION_HOME} />

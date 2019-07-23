@@ -9,6 +9,7 @@ export const LocationLayout = styled.div`
   border: none;
   text-decoration: none;
   flex: 0 0 95%;
+  width: 100%;
   @media (min-width: ${Theme.mediaQuery.medium}) {
     flex: 0 0 45%;
   }
@@ -33,5 +34,23 @@ export const LocationLayout = styled.div`
     padding-right: 15px;
     padding-bottom: 15px;
     margin: 0;
+  }
+  a {
+    float: right;
+    padding: 15px;
+    margin: 2.5%;
+    background-color: ${Theme.color.lightpink};
+    color: ${Theme.color.mediumbrown};
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+    flex: 0 0 95%;
+    @media (min-width: ${Theme.mediaQuery.medium}) {
+      flex: 0 0 45%;
+    }
+    @media (min-width: ${Theme.mediaQuery.large}) {
+      flex: 0 0 27.5%;
+    }
   }
 `;

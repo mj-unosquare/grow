@@ -19,7 +19,7 @@ export const HomeLayout = styled.div`
     font-size: 1.5em;
     padding: 15px;
     background-color: ${Theme.color.mediumbrown};
-    color: white;
+    color: ${Theme.color.lightpink};
     border-radius: 10px;
     border: none;
     text-decoration: none;
