@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { createGlobalStyle } from "styled-components";
 
 import { GlobalStyle } from "./styled";
