@@ -4,28 +4,20 @@ import { Theme } from "Theme/theme";
 export const LocationEntryLayout = styled.div`
   list-style-type: none;
   display: grid;
-
+  padding: 5%;
+  grid-gap: auto;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
   grid-template-areas:
-    "locationimg"
-    "title"
-    "description";
+    "title title title"
+    "description description description"
+    "plantlist plantlist plantlist";
 
   @media (min-width: ${Theme.mediaQuery.medium}) {
     grid-template-areas:
-      "locationimg title title"
-      "locationimg description description";
-  }
-
-  @media (min-width: ${Theme.mediaQuery.large}) {
-    grid-template-areas:
-      "locationimg title title"
-      "locationimg description description";
-  }
-
-  @media (min-width: ${Theme.mediaQuery.xlarge}) {
-    grid-template-areas:
-      "locationimg title title"
-      "locationimg description description";
+      "title title title"
+      "description description description"
+      "plantlist plantlist plantlist";
   }
 
   h1 {
@@ -45,10 +37,23 @@ export const LocationEntryLayout = styled.div`
     padding-bottom: 15px;
     margin: 0;
     color: ${Theme.color.mediumbrown};
+    width: 100%;
   }
 
   img {
     width: 100%;
     grid-area: locationimg;
+    border-radius: 10px;
+    display: none;
+    @media (min-width: ${Theme.mediaQuery.medium}) {
+      display: none;
+    }
+  }
+
+  .plantList {
+    grid-area: plantlist;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
   }
 `;
