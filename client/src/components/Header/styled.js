@@ -8,12 +8,11 @@ export const HeaderLayout = styled.div`
   }
 
   .navHeader {
-    max-width: 1010px;
     padding: 26px 20px;
     width: 100%;
     display: flex;
     align-items: center;
-    margin: 0 auto;
+    margin: 0;
   }
 
   .navLeft {
@@ -52,7 +51,9 @@ export const HeaderLayout = styled.div`
 
   .navRight {
     width: 30%;
+    justify-content: right;
     text-align: right;
+    float: right;
     a {
       display: none;
     }
@@ -61,7 +62,6 @@ export const HeaderLayout = styled.div`
         display: unset;
         font-size: 1.5em;
         color: ${Theme.color.dustypink};
-        margin-right: 10%;
         text-decoration: none;
       }
     }
