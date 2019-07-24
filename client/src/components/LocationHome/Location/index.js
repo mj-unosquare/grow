@@ -11,7 +11,7 @@ const Location = props => {
       <img src={!imageurl.length ? require("Images/stock.jpeg") : imageurl} />
       <h1> {name} </h1>
       <p> {description} </p>
-      <Link to={routes.HOME}>grow here</Link>
+      <Link to={`/locations/${id}`}>grow here</Link>
     </LocationLayout>
   );
 };

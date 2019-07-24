@@ -25,6 +25,12 @@ const mockdata = [
   }
 ];
 
-export const retrieveLocations = () => {
+const retrieveLocations = () => {
   return mockdata;
 };
+
+const retrieveLocationById = id => {
+  return mockdata[id];
+};
+
+export { retrieveLocations, retrieveLocationById };

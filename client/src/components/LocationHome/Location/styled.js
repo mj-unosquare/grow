@@ -4,10 +4,8 @@ import { Theme } from "Theme/theme";
 export const LocationLayout = styled.div`
   margin: 2.5%;
   background-color: ${Theme.color.darkgreen};
-  color: white;
   border-radius: 10px;
   border: none;
-  text-decoration: none;
   flex: 0 0 95%;
   width: 100%;
   @media (min-width: ${Theme.mediaQuery.medium}) {
@@ -34,6 +32,7 @@ export const LocationLayout = styled.div`
     padding-right: 15px;
     padding-bottom: 15px;
     margin: 0;
+    color: white;
   }
   a {
     float: right;
