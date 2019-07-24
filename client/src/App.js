@@ -1,10 +1,9 @@
 import React, { Fragment } from "react";
 import { Router } from "@reach/router";
 import { createGlobalStyle } from "styled-components";
-import Home from "Components/Home";
-import LocationHome from "Components/LocationHome";
 import routes from "Constants/routes";
 import { GlobalStyle } from "./styled";
+import { Home, LocationHome } from "Components";
 
 const App = () => {
   return (
