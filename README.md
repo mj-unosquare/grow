@@ -36,6 +36,6 @@ npm run start
 Navigate to http://localhost:3000/ and there will be a messaging saying `grow is running`.
 
 * Sample endpoints:
-`localhost:3000/accounts/1` - Get account by id
-`localhost:3000/locations/account/1` - Get locations by account id
-`localhost:3000/plants/location/1` - Get plants by location id
+    * `localhost:3000/accounts/1` - Get account by id
+    * `localhost:3000/locations/account/1` - Get locations by account id
+    * `localhost:3000/plants/location/1` - Get plants by location id
