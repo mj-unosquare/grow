@@ -1,11 +1,4 @@
-import {
-  Entity,
-  PrimaryGeneratedColumn,
-  Column,
-  OneToMany,
-  JoinColumn,
-} from 'typeorm';
-import { Location } from 'src/locations/locations.entity';
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('account')
 export class Account {
@@ -23,9 +16,4 @@ export class Account {
   create_on: Date;
   @Column()
   last_login: Date;
-  // @OneToMany(type => Location, location => location.account, {
-  //   eager: true,
-  // })
-  // @JoinColumn()
-  // locations: Location[];
 }
