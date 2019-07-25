@@ -4,6 +4,7 @@ import { createGlobalStyle } from "styled-components";
 import Header from "Components/Header";
 import Home from "Components/Home";
 import LocationEntry from "Components/LocationEntry";
+import PlantEntry from "Components/PlantEntry";
 import LocationHome from "Components/LocationHome";
 import routes from "Constants/routes";
 import { GlobalStyle } from "./styled";
@@ -17,6 +18,7 @@ const App = () => {
         <Home path={routes.HOME} />
         <LocationHome path={routes.LOCATION_HOME} />
         <LocationEntry path={routes.LOCATION_ENTRY} />
+        <PlantEntry path={routes.PLANT_ENTRY} />
       </Router>
     </Fragment>
   );

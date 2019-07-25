@@ -7,7 +7,7 @@ export const HomeLayout = styled.div`
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  @media (min-width: ${Theme.mediaQuery.large}) {
+  @media (min-width: ${Theme.mediaQuery.medium}) {
     margin-top: 10%;
   }
   img {
@@ -23,7 +23,7 @@ export const HomeLayout = styled.div`
     border-radius: 10px;
     border: none;
     text-decoration: none;
-    @media (min-width: ${Theme.mediaQuery.large}) {
+    @media (min-width: ${Theme.mediaQuery.medium}) {
       margin-top: 5%;
     }
   }
@@ -33,5 +33,19 @@ export const HomeLayout = styled.div`
     font-size: 2.5em;
     text-align: center;
     flex: 0 0 92%;
+  }
+  .hyperlink {
+    color: ${Theme.color.mediumbrown};
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+    background-color: ${Theme.color.lightpink};
+    border: none;
+    text-decoration: underline;
+    flex: 0 0 92%;
+    @media (min-width: ${Theme.mediaQuery.medium}) {
+      margin-top: 0;
+    }
   }
 `;

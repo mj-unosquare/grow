@@ -9,7 +9,6 @@ const LocationEntry = props => {
     "https://images.pexels.com/photos/1122765/pexels-photo-1122765.jpeg";
   const { id, name, description, imageurl } = props.location;
   const plants = props.plants;
-  console.log(stockImg);
   return (
     <LocationEntryLayout>
       <img src={stockImg} />
