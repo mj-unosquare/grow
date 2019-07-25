@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
-import styled from "styled-components";
 import { HomeLayout } from "./styled";
-import routes from "Constants/routes";
+import { routes } from "Constants";
 
 const Home = () => {
   return (

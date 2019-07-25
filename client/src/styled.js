@@ -1,12 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 
-const Theme = {
+export const Theme = {
   color: {
     lightgreen: "#C9E4CA",
     lightblue: "#3BADDD",
     mediumgreen: "#6EB56E",
     mediumbrown: "#443730",
-    darkblue: "#2E3F4C"
+    darkblue: "#2E3F4C",
+    darkgreen: "#325332"
   },
   font: {},
   mediaQuery: {
