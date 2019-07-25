@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import container from "./container";
 import { LocationHomeLayout } from "./styled";
 import Location from "./Location";

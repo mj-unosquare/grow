@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import { Theme } from "Theme/theme";
 
 export const HeaderLayout = styled.div`
   .nav {
-    background-color: ${Theme.color.lightpink};
+    background-color: ${props => props.theme.color.lightpink};
     border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
   }
 
@@ -22,11 +21,11 @@ export const HeaderLayout = styled.div`
     a {
       display: none;
     }
-    @media (min-width: ${Theme.mediaQuery.medium}) {
+    @media (min-width: ${props => props.theme.mediaQuery.medium}) {
       a {
         display: unset;
         font-size: 2em;
-        color: ${Theme.color.mediumbrown};
+        color: ${props => props.theme.color.mediumbrown};
         margin-left: 10%;
         text-decoration: none;
       }
@@ -39,11 +38,11 @@ export const HeaderLayout = styled.div`
     a {
       display: unset;
       font-size: 2em;
-      color: ${Theme.color.mediumbrown};
+      color: ${props => props.theme.color.mediumbrown};
       margin-left: 10%;
       text-decoration: none;
     }
-    @media (min-width: ${Theme.mediaQuery.medium}) {
+    @media (min-width: ${props => props.theme.mediaQuery.medium}) {
       a {
         display: none;
       }
@@ -56,11 +55,11 @@ export const HeaderLayout = styled.div`
     a {
       display: none;
     }
-    @media (min-width: ${Theme.mediaQuery.medium}) {
+    @media (min-width: ${props => props.theme.mediaQuery.medium}) {
       a {
         display: unset;
         font-size: 1.5em;
-        color: ${Theme.color.dustypink};
+        color: ${props => props.theme.color.dustypink};
         margin-right: 10%;
         text-decoration: none;
       }

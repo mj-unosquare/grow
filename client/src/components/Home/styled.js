@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Theme } from "Theme/theme";
 
 export const HomeLayout = styled.div`
   margin-top: 20%;
@@ -7,7 +6,7 @@ export const HomeLayout = styled.div`
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  @media (min-width: ${Theme.mediaQuery.large}) {
+  @media (min-width: ${props => props.theme.mediaQuery.large}) {
     margin-top: 10%;
   }
   img {
@@ -18,17 +17,17 @@ export const HomeLayout = styled.div`
     margin-top: 10%;
     font-size: 1.5em;
     padding: 15px;
-    background-color: ${Theme.color.mediumbrown};
-    color: ${Theme.color.lightpink};
+    background-color: ${props => props.theme.color.mediumbrown};
+    color: white;
     border-radius: 10px;
     border: none;
     text-decoration: none;
-    @media (min-width: ${Theme.mediaQuery.large}) {
+    @media (min-width: ${props => props.theme.mediaQuery.large}) {
       margin-top: 5%;
     }
   }
   h1 {
-    color: ${Theme.color.mediumbrown};
+    color: ${props => props.theme.color.mediumbrown};
     margin: 0;
     font-size: 2.5em;
     text-align: center;
