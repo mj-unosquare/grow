@@ -10,7 +10,7 @@ npm install
 npm run build
 npm run start
 ```
-=======
+
 ## Server Setup for Development ##
 ```
 cd server/

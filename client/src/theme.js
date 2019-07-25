@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 
 export const Theme = {
   color: {
@@ -17,19 +17,3 @@ export const Theme = {
     xlarge: "1220px"
   }
 };
-
-export const GlobalStyle = createGlobalStyle`
-    body {
-        background-color: ${Theme.color.lightgreen};
-        font-family: "Montserrat", sans-serif;
-    }
-
-    h1 {
-    font-size: 1.5em;
-    color: white;
-    }
-
-    img{
-    width: 150px;
-    }
-`;
