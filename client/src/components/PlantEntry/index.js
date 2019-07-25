@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { Link } from "@reach/router";
 import container from "./container";
 import { PlantEntryLayout } from "./styled";
