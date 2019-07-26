@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "@reach/router";
 import container from "./container";
 import { PlantEntryLayout } from "./styled";
-import routes from "Constants/routes";
+import { Routes } from "Constants";
 
 const PlantEntry = props => {
   const stockImg =
@@ -15,13 +15,13 @@ const PlantEntry = props => {
       <h1> {name} </h1>
       <p> {description} </p>
       <div className="buttons">
-        <Link to={routes.LOCATION_HOME}>
+        <Link to={Routes.LOCATION_HOME}>
           <span>
             <i className="fas fa-clipboard-list"></i>
             track
           </span>
         </Link>
-        <Link to={routes.LOCATION_HOME}>
+        <Link to={Routes.LOCATION_HOME}>
           <span>
             <i className="fas fa-chart-area"></i>stats
           </span>

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Theme } from "Theme/theme";
 
 export const PlantEntryLayout = styled.div`
   list-style-type: none;
@@ -13,7 +12,7 @@ export const PlantEntryLayout = styled.div`
     "description description description"
     "buttons buttons buttons";
 
-  @media (min-width: ${Theme.mediaQuery.medium}) {
+  @media (min-width: ${props => props.theme.mediaQuery.medium}) {
     grid-template-areas:
       "locationimg title title"
       "locationimg description description"
@@ -27,7 +26,7 @@ export const PlantEntryLayout = styled.div`
     padding-right: 15px;
     padding-bottom: 2px;
     margin: 0;
-    color: ${Theme.color.mediumbrown};
+    color: ${props => props.theme.color.mediumbrown};
   }
   p {
     grid-area: description;
@@ -36,7 +35,7 @@ export const PlantEntryLayout = styled.div`
     padding-right: 15px;
     padding-bottom: 15px;
     margin: 0;
-    color: ${Theme.color.mediumbrown};
+    color: ${props => props.theme.color.mediumbrown};
     width: 100%;
   }
 
@@ -44,7 +43,7 @@ export const PlantEntryLayout = styled.div`
     width: 100%;
     grid-area: locationimg;
     border-radius: 10px;
-    @media (min-width: ${Theme.mediaQuery.medium}) {
+    @media (min-width: ${props => props.theme.mediaQuery.medium}) {
     }
   }
 
@@ -62,16 +61,16 @@ export const PlantEntryLayout = styled.div`
       padding-bottom: 25px;
       text-align: center;
       text-decoration: none;
-      background-color: ${Theme.color.dustypink};
+      background-color: ${props => props.theme.color.dustypink};
       flex: 0 0 35%;
-      @media (min-width: ${Theme.mediaQuery.medium}) {
+      @media (min-width: ${props => props.theme.mediaQuery.medium}) {
         flex: 0 0 33%;
       }
 
       span {
         font-size: 1.5em;
         text-decoration: none;
-        color: ${Theme.color.lightpink};
+        color: ${props => props.theme.color.lightpink};
         i {
           font-size: 3em;
           width: 100%;

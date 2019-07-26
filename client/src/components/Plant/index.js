@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "@reach/router";
 import styled from "styled-components";
 import { PlantLayout } from "./styled";
-import routes from "Constants/routes";
 
 const Plant = props => {
   const { id, name, description, imageurl } = props;

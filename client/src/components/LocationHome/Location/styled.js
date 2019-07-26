@@ -1,17 +1,17 @@
 import styled from "styled-components";
-import { Theme } from "Theme/theme";
 
 export const LocationLayout = styled.div`
   margin: 2.5%;
-  background-color: ${Theme.color.darkgreen};
+  background-color: ${props => props.theme.color.darkgreen};
+  color: white;
   border-radius: 10px;
   border: none;
   flex: 0 0 95%;
   width: 100%;
-  @media (min-width: ${Theme.mediaQuery.medium}) {
+  @media (min-width: ${props => props.theme.mediaQuery.medium}) {
     flex: 0 0 45%;
   }
-  @media (min-width: ${Theme.mediaQuery.large}) {
+  @media (min-width: ${props => props.theme.mediaQuery.large}) {
     flex: 0 0 27.5%;
   }
 
@@ -38,17 +38,17 @@ export const LocationLayout = styled.div`
     float: right;
     padding: 15px;
     margin: 2.5%;
-    background-color: ${Theme.color.lightpink};
-    color: ${Theme.color.mediumbrown};
+    background-color: ${props => props.theme.color.lightpink};
+    color: ${props => props.theme.color.mediumbrown};
     font-weight: bold;
     border-radius: 10px;
     border: none;
     text-decoration: none;
     flex: 0 0 95%;
-    @media (min-width: ${Theme.mediaQuery.medium}) {
+    @media (min-width: ${props => props.theme.mediaQuery.medium}) {
       flex: 0 0 45%;
     }
-    @media (min-width: ${Theme.mediaQuery.large}) {
+    @media (min-width: ${props => props.theme.mediaQuery.large}) {
       flex: 0 0 27.5%;
     }
   }

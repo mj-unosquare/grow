@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "@reach/router";
 import styled from "styled-components";
 import { HeaderLayout } from "./styled";
-import routes from "Constants/routes";
-import { Theme } from "Theme/theme";
+import { Routes } from "Constants";
 
 const Header = () => {
   return (
@@ -11,15 +10,15 @@ const Header = () => {
       <div className="nav">
         <div className="navHeader">
           <div className="navLeft">
-            <Link to={routes.HOME}>grow.</Link>
+            <Link to={Routes.HOME}>grow.</Link>
           </div>
 
           <div className="navCenter">
-            <Link to={routes.HOME}>grow.</Link>
+            <Link to={Routes.HOME}>grow.</Link>
           </div>
 
           <div className="navRight">
-            <Link to={routes.LOCATION_HOME}>garden</Link>
+            <Link to={Routes.LOCATION_HOME}>garden</Link>
           </div>
         </div>
       </div>

@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "@reach/router";
-import styled from "styled-components";
 import { LocationLayout } from "./styled";
-import routes from "Constants/routes";
 
 const Location = props => {
   const { id, name, description, imageurl } = props;
