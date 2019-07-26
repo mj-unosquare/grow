@@ -12,11 +12,11 @@ export const LocationHome = ({ locations }) => {
         locations.map(location => {
           return (
             <Location
-              id={location.id}
-              name={location.name}
+              id={location.location_id}
+              name={location.location_name}
               description={location.description}
               imageurl={location.imageurl}
-              key={location.id}
+              key={location.location_id}
             />
           );
         })

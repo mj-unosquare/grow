@@ -11,8 +11,10 @@ export default Wrapped =>
     }
 
     componentDidMount() {
-      this.setState({
-        locations: retrieveLocations()
+      retrieveLocations().then(response => {
+        this.setState({
+          locations: response.data
+        });
       });
     }
 

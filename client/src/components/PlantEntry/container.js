@@ -11,8 +11,10 @@ export default Wrapped =>
     }
 
     componentDidMount() {
-      this.setState({
-        plant: retrievePlantById(this.props.id - 1)
+      retrievePlantById(this.props.id).then(response => {
+        this.setState({
+          plant: response.data[0]
+        });
       });
     }
 

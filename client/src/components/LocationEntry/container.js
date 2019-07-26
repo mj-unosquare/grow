@@ -13,9 +13,15 @@ export default Wrapped =>
     }
 
     componentDidMount() {
-      this.setState({
-        location: retrieveLocationById(this.props.id - 1),
-        plants: retrievePlantsByLocationId(this.props.id)
+      retrieveLocationById(this.props.id).then(response => {
+        this.setState({
+          location: response.data[0]
+        });
+      });
+      retrievePlantsByLocationId(this.props.id).then(response => {
+        this.setState({
+          plants: response.data
+        });
       });
     }
 
