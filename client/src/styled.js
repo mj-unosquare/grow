@@ -23,10 +23,10 @@ export const Theme = {
 };
 
 export const device = {
-  small: `@media (min-width: $Theme.mediaSizes.small)`,
-  medium: `@media (min-width: $Theme.mediaSizes.medium)`,
-  large: `@media (min-width: $Theme.mediaSizes.large)`,
-  xlarge: `@media (min-width: $Theme.mediaSizes.xlarge)`
+  small: `@media (min-width: ${Theme.mediaSizes.small})`,
+  medium: `@media (min-width: ${Theme.mediaSizes.medium})`,
+  large: `@media (min-width: ${Theme.mediaSizes.large})`,
+  xlarge: `@media (min-width: ${Theme.mediaSizes.xlarge})`
 };
 
 export const GlobalStyle = createGlobalStyle`
