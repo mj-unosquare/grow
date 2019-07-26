@@ -8,10 +8,9 @@ const PlantEntry = props => {
   const stockImg =
     "https://images.pexels.com/photos/1122765/pexels-photo-1122765.jpeg";
   const { id, name, description, imageurl } = props.plant;
-  const plants = props.plants;
   return (
     <PlantEntryLayout>
-      <img src={imageurl} />
+      <img src={!imageurl ? stockImg : imageurl} />
       <h1> {name} </h1>
       <p> {description} </p>
       <div className="buttons">
