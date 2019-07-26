@@ -11,6 +11,9 @@ const envKeys = Object.keys(env).reduce((prev, next) => {
 }, {});
 
 module.exports = {
+  output: {
+    publicPath: "/"
+  },
   module: {
     rules: [
       {
@@ -37,6 +40,9 @@ module.exports = {
         use: ["style-loader", "css-loader"]
       }
     ]
+  },
+  devServer: {
+    historyApiFallback: true
   },
   plugins: [
     new HtmlWebPackPlugin({

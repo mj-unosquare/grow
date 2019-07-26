@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "Theme/styled";
 
 export const LocationEntryLayout = styled.div`
   list-style-type: none;
@@ -12,7 +13,7 @@ export const LocationEntryLayout = styled.div`
     "description description description"
     "plantlist plantlist plantlist";
 
-  @media (min-width: ${props => props.theme.mediaQuery.medium}) {
+  ${device.medium} {
     grid-template-areas:
       "title title title"
       "description description description"
@@ -26,7 +27,7 @@ export const LocationEntryLayout = styled.div`
     padding-right: 15px;
     padding-bottom: 2px;
     margin: 0;
-    color: ${props => props.theme.color.mediumbrown};
+    color: ${({ theme }) => theme.color.mediumbrown};
   }
   p {
     grid-area: description;
@@ -35,7 +36,7 @@ export const LocationEntryLayout = styled.div`
     padding-right: 15px;
     padding-bottom: 15px;
     margin: 0;
-    color: ${props => props.theme.color.mediumbrown};
+    color: ${({ theme }) => theme.color.mediumbrown};
     width: 100%;
   }
 
@@ -44,7 +45,7 @@ export const LocationEntryLayout = styled.div`
     grid-area: locationimg;
     border-radius: 10px;
     display: none;
-    @media (min-width: ${props => props.theme.mediaQuery.medium}) {
+    ${device.medium} {
       display: none;
     }
   }

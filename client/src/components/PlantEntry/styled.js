@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "Theme/styled";
 
 export const PlantEntryLayout = styled.div`
   list-style-type: none;
@@ -12,7 +13,7 @@ export const PlantEntryLayout = styled.div`
     "description description description"
     "buttons buttons buttons";
 
-  @media (min-width: ${props => props.theme.mediaQuery.medium}) {
+  ${device.medium} {
     grid-template-areas:
       "locationimg title title"
       "locationimg description description"
@@ -26,7 +27,7 @@ export const PlantEntryLayout = styled.div`
     padding-right: 15px;
     padding-bottom: 2px;
     margin: 0;
-    color: ${props => props.theme.color.mediumbrown};
+    color: ${({ theme }) => theme.color.mediumbrown};
   }
   p {
     grid-area: description;
@@ -35,7 +36,7 @@ export const PlantEntryLayout = styled.div`
     padding-right: 15px;
     padding-bottom: 15px;
     margin: 0;
-    color: ${props => props.theme.color.mediumbrown};
+    color: ${({ theme }) => theme.color.mediumbrown};
     width: 100%;
   }
 
@@ -43,7 +44,7 @@ export const PlantEntryLayout = styled.div`
     width: 100%;
     grid-area: locationimg;
     border-radius: 10px;
-    @media (min-width: ${props => props.theme.mediaQuery.medium}) {
+    ${device.medium} {
     }
   }
 
@@ -61,16 +62,19 @@ export const PlantEntryLayout = styled.div`
       padding-bottom: 25px;
       text-align: center;
       text-decoration: none;
-      background-color: ${props => props.theme.color.dustypink};
+      background-color: ${({ theme }) => theme.color.dustypink};
       flex: 0 0 35%;
-      @media (min-width: ${props => props.theme.mediaQuery.medium}) {
+      max-height: 150px;
+      max-width: 150px;
+      justify-content: space-evenly;
+      ${device.medium} {
         flex: 0 0 33%;
       }
 
       span {
         font-size: 1.5em;
         text-decoration: none;
-        color: ${props => props.theme.color.lightpink};
+        color: ${({ theme }) => theme.color.lightpink};
         i {
           font-size: 3em;
           width: 100%;

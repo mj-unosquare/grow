@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "Theme/styled";
 
 export const PlantLayout = styled.div`
   height: 40%;
@@ -8,10 +9,10 @@ export const PlantLayout = styled.div`
   flex: 0 0 95%;
   width: 100%;
   position: relative;
-  @media (min-width: ${props => props.theme.mediaQuery.medium}) {
+  ${device.medium} {
     flex: 0 0 45%;
   }
-  @media (min-width: ${props => props.theme.mediaQuery.large}) {
+  ${device.large} {
     flex: 0 0 27.5%;
   }
 
@@ -48,7 +49,7 @@ export const PlantLayout = styled.div`
       padding-right: 15px;
       padding-bottom: 2px;
       margin: 0;
-      color: ${props => props.theme.color.mediumbrown};
+      color: ${({ theme }) => theme.color.mediumbrown};
     }
     p {
       padding-top: 2px;
@@ -56,22 +57,22 @@ export const PlantLayout = styled.div`
       padding-right: 15px;
       padding-bottom: 15px;
       margin: 5%;
-      color: ${props => props.theme.color.mediumbrown};
+      color: ${({ theme }) => theme.color.mediumbrown};
     }
     a {
       padding: 15px;
       margin: 5%;
-      background-color: ${props => props.theme.color.lightpink};
-      color: ${props => props.theme.color.mediumbrown};
+      background-color: ${({ theme }) => theme.color.lightpink};
+      color: ${({ theme }) => theme.color.mediumbrown};
       font-weight: bold;
       border-radius: 10px;
       border: none;
       text-decoration: none;
       flex: 0 0 95%;
-      @media (min-width: ${props => props.theme.mediaQuery.medium}) {
+      ${device.medium} {
         flex: 0 0 45%;
       }
-      @media (min-width: ${props => props.theme.mediaQuery.large}) {
+      ${device.large} {
         flex: 0 0 27.5%;
       }
     }
