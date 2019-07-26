@@ -1,17 +1,18 @@
 import styled from "styled-components";
+import { device } from "Theme/styled";
 
 export const LocationLayout = styled.div`
   margin: 2.5%;
-  background-color: ${props => props.theme.color.darkgreen};
+  background-color: ${({ theme }) => theme.color.darkgreen};
   color: white;
   border-radius: 10px;
   border: none;
   text-decoration: none;
   flex: 0 0 95%;
-  @media (min-width: ${props => props.theme.mediaQuery.medium}) {
+  ${device.medium} {
     flex: 0 0 45%;
   }
-  @media (min-width: ${props => props.theme.mediaQuery.large}) {
+  ${device.large} {
     flex: 0 0 27.5%;
   }
 
@@ -37,17 +38,17 @@ export const LocationLayout = styled.div`
     float: right;
     padding: 15px;
     margin: 2.5%;
-    background-color: ${props => props.theme.color.lightpink};
-    color: ${props => props.theme.color.mediumbrown};
+    background-color: ${({ theme }) => theme.color.lightpink};
+    color: ${({ theme }) => theme.color.mediumbrown};
     font-weight: bold;
     border-radius: 10px;
     border: none;
     text-decoration: none;
     flex: 0 0 95%;
-    @media (min-width: ${props => props.theme.mediaQuery.medium}) {
+    ${device.medium} {
       flex: 0 0 45%;
     }
-    @media (min-width: ${props => props.theme.mediaQuery.large}) {
+    ${device.large} {
       flex: 0 0 27.5%;
     }
   }

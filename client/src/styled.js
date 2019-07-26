@@ -14,12 +14,19 @@ export const Theme = {
     gold: "#F5CF6A"
   },
   font: {},
-  mediaQuery: {
+  mediaSizes: {
     small: "600px",
     medium: "768px",
     large: "992px",
     xlarge: "1220px"
   }
+};
+
+export const device = {
+  small: `@media (min-width: $Theme.mediaSizes.small)`,
+  medium: `@media (min-width: $Theme.mediaSizes.medium)`,
+  large: `@media (min-width: $Theme.mediaSizes.large)`,
+  xlarge: `@media (min-width: $Theme.mediaSizes.xlarge)`
 };
 
 export const GlobalStyle = createGlobalStyle`
