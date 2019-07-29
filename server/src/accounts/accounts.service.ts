@@ -9,7 +9,7 @@ export class AccountsService {
     @InjectRepository(Account) private accountsRepository: Repository<Account>,
   ) {}
 
-  async getAccounts(account: Account): Promise<Account[]> {
+  async getAccounts(): Promise<Account[]> {
     return await this.accountsRepository.find();
   }
 
