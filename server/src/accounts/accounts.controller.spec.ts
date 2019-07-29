@@ -39,4 +39,9 @@ describe('Accounts Controller', () => {
     jest.spyOn(service, 'getAccount').mockResolvedValueOnce([result]);
     expect(await controller.get(1)).toEqual([result]);
   });
+
+  it(`get /accounts/:id - invalid id`, async () => {
+    jest.spyOn(service, 'getAccount').mockResolvedValueOnce([]);
+    expect(await controller.get(1)).toEqual([]);
+  });
 });

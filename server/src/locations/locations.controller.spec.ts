@@ -49,4 +49,9 @@ describe('Locations Controller', () => {
     jest.spyOn(service, 'getLocationsByUserId').mockResolvedValueOnce([result]);
     expect(await controller.getLocations(1)).toEqual([result]);
   });
+
+  it(`get /locations/account/:id - invalid id`, async () => {
+    jest.spyOn(service, 'getLocationsByUserId').mockResolvedValueOnce([]);
+    expect(await controller.getLocations(1)).toEqual([]);
+  });
 });

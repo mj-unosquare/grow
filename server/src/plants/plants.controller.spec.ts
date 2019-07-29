@@ -51,4 +51,9 @@ describe('Plants Controller', () => {
       .mockResolvedValueOnce([result]);
     expect(await controller.getPlants(1)).toEqual([result]);
   });
+
+  it(`get /locations/account/:id - invalid id`, async () => {
+    jest.spyOn(service, 'getPlantsByLocationId').mockResolvedValueOnce([]);
+    expect(await controller.getPlants(1)).toEqual([]);
+  });
 });

@@ -9,13 +9,14 @@ import {
 } from '@nestjs/common';
 import { AccountsService } from './accounts.service';
 import { Account } from './accounts.entity';
+import { FindByIdParams } from 'src/utils/FindByIdParams';
 
 @Controller('accounts')
 export class AccountsController {
   constructor(private service: AccountsService) {}
 
   @Get(':id')
-  get(@Param() params) {
+  get(@Param() params: FindByIdParams) {
     return this.service.getAccount(params.id);
   }
 
