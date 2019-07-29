@@ -25,7 +25,7 @@ describe('PlantsService', () => {
     expect(service).toBeDefined();
   });
 
-  it(`getAccounts`, async () => {
+  it(`getLocations`, async () => {
     const result: Plant = {
       plant_id: 1,
       plant_name: 'plant name',
@@ -37,7 +37,7 @@ describe('PlantsService', () => {
     expect(await service.getPlantsByLocationId(1)).toEqual([result]);
   });
 
-  it(`getAccount`, async () => {
+  it(`getLocation`, async () => {
     const result: Plant = {
       plant_id: 1,
       plant_name: 'plant name',
@@ -49,7 +49,7 @@ describe('PlantsService', () => {
     expect(await service.getPlant(1)).toEqual([result]);
   });
 
-  it(`getAccount`, async () => {
+  it(`getLocation`, async () => {
     jest.spyOn(repo, 'find').mockResolvedValueOnce([]);
     expect(await service.getPlant(1)).toEqual([]);
   });
