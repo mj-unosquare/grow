@@ -1,3 +1,3 @@
-import routes from "./routes";
+import Routes from "./routes";
 
-export { routes };
+export { Routes };
