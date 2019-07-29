@@ -7,6 +7,7 @@ import { Repository } from 'typeorm';
 
 describe('AccountsService', () => {
   let service: AccountsService;
+  let repo: Repository<Account>;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
@@ -17,9 +18,43 @@ describe('AccountsService', () => {
       .compile();
 
     service = module.get<AccountsService>(AccountsService);
+    repo = module.get<Repository<Account>>(getRepositoryToken(Account));
   });
 
   it('should be defined', () => {
     expect(service).toBeDefined();
+  });
+
+  it(`getAccounts`, async () => {
+    const result: Account = {
+      user_id: 1,
+      username: 'janed',
+      email: 'a@b.com',
+      first_name: 'jane',
+      surname: 'doe',
+      create_on: new Date(),
+      last_login: new Date(),
+    };
+    jest.spyOn(repo, 'find').mockResolvedValueOnce([result]);
+    expect(await service.getAccounts()).toEqual([result]);
+  });
+
+  it(`getAccount`, async () => {
+    const result: Account = {
+      user_id: 1,
+      username: 'janed',
+      email: 'a@b.com',
+      first_name: 'jane',
+      surname: 'doe',
+      create_on: new Date(),
+      last_login: new Date(),
+    };
+    jest.spyOn(repo, 'find').mockResolvedValueOnce([result]);
+    expect(await service.getAccount(1)).toEqual([result]);
+  });
+
+  it(`getAccount`, async () => {
+    jest.spyOn(repo, 'find').mockResolvedValueOnce([]);
+    expect(await service.getAccount(1)).toEqual([]);
   });
 });
