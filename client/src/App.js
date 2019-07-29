@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 import { Router } from "@reach/router";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { routes } from "Constants";
+import { Routes } from "Constants";
 import { GlobalStyle, Theme } from "./styled";
-import { Home, LocationHome } from "Components";
+import { Home, LocationHome, Header } from "Components";
 
 const App = () => {
   return (
@@ -11,8 +11,8 @@ const App = () => {
       <GlobalStyle />
       <ThemeProvider theme={Theme}>
         <Router>
-          <Home path={routes.HOME} />
-          <LocationHome path={routes.LOCATION_HOME} />
+          <Home path={Routes.HOME} />
+          <LocationHome path={Routes.LOCATION_HOME} />
         </Router>
       </ThemeProvider>
     </Fragment>

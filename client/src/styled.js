@@ -3,14 +3,18 @@ import { createGlobalStyle } from "styled-components";
 export const Theme = {
   color: {
     lightgreen: "#C9E4CA",
+    lightpink: "#F6EDEA",
     lightblue: "#3BADDD",
     mediumgreen: "#6EB56E",
     mediumbrown: "#443730",
     darkblue: "#2E3F4C",
-    darkgreen: "#325332"
+    darkgreen: "#325332",
+    pink: "#FEC0AA",
+    dustypink: "#E7AF9B",
+    gold: "#F5CF6A"
   },
   font: {},
-  mediaQuery: {
+  mediaSizes: {
     small: "600px",
     medium: "768px",
     large: "992px",
@@ -18,9 +22,16 @@ export const Theme = {
   }
 };
 
+export const device = {
+  small: `@media (min-width: ${Theme.mediaSizes.small})`,
+  medium: `@media (min-width: ${Theme.mediaSizes.medium})`,
+  large: `@media (min-width: ${Theme.mediaSizes.large})`,
+  xlarge: `@media (min-width: ${Theme.mediaSizes.xlarge})`
+};
+
 export const GlobalStyle = createGlobalStyle`
     body {
-        background-color: ${Theme.color.lightgreen};
+        background-color: ${Theme.color.lightpink};
         font-family: "Montserrat", sans-serif;
     }
 
