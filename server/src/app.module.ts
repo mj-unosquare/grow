@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { AccountsModule } from './accounts/accounts.module';
 import { LocationsModule } from './locations/locations.module';
 import { PlantsModule } from './plants/plants.module';
+import { ConfigModule } from './config/config.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { PlantsModule } from './plants/plants.module';
     AccountsModule,
     LocationsModule,
     PlantsModule,
+    ConfigModule,
   ],
   controllers: [AppController],
   providers: [AppService],
