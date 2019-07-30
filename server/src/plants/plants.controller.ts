@@ -9,19 +9,18 @@ import {
 } from '@nestjs/common';
 import { PlantsService } from './plants.service';
 import { Plant } from './plants.entity';
-import { FindByIdParams } from 'src/utils/FindByIdParams';
 
 @Controller('plants')
 export class PlantsController {
   constructor(private service: PlantsService) {}
 
   @Get(':id')
-  get(@Param() params: FindByIdParams) {
+  get(@Param() params) {
     return this.service.getPlant(params.id);
   }
 
   @Get('location/:id')
-  getPlants(@Param() params: FindByIdParams) {
+  getPlants(@Param() params) {
     return this.service.getPlantsByLocationId(params.id);
   }
 
