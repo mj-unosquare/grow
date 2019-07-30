@@ -10,6 +10,7 @@ import {
   LocationHome,
   PlantEntry
 } from "Components";
+import TrackerHome from "./components/TrackerHome";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
             <LocationHome path={Routes.LOCATION_HOME} />
             <LocationEntry path={Routes.LOCATION_ENTRY} />
             <PlantEntry path={Routes.PLANT_ENTRY} />
+            <TrackerHome path={Routes.TRACKER_HOME} />
           </Router>
         </Fragment>
       </ThemeProvider>

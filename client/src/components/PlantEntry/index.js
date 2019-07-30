@@ -14,7 +14,7 @@ const PlantEntry = props => {
       <h1> {plant_name} </h1>
       <p> {description} </p>
       <div className="buttons">
-        <Link to={Routes.LOCATION_HOME}>
+        <Link to={`/plants/tracker/${plant_id}`}>
           <span>
             <i className="fas fa-clipboard-list"></i>
             track

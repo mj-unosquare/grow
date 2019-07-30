@@ -4,5 +4,14 @@ import LocationEntry from "Components/LocationEntry";
 import LocationHome from "Components/LocationHome";
 import Plant from "Components/Plant";
 import PlantEntry from "Components/PlantEntry";
+import TrackerHome from "Components/TrackerHome";
 
-export { Header, Home, LocationEntry, LocationHome, Plant, PlantEntry };
+export {
+  Header,
+  Home,
+  LocationEntry,
+  LocationHome,
+  Plant,
+  PlantEntry,
+  TrackerHome
+};
