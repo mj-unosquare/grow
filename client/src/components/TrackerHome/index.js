@@ -1,9 +1,15 @@
 import React from "react";
+import { Link } from "@reach/router";
 import { TrackerHomeLayout } from "./styled";
-import Tracker from "./Tracker";
 
 export const TrackerHome = () => {
-  return <TrackerHomeLayout>Component loaded</TrackerHomeLayout>;
+  return (
+    <TrackerHomeLayout>
+      <Link to={`/plants/tracker/water/1`}>water</Link>
+      <Link to={`/plants/tracker/water/1`}>sunlight</Link>
+      <Link to={`/plants/tracker/water/1`}>food</Link>
+    </TrackerHomeLayout>
+  );
 };
 
 export default TrackerHome;

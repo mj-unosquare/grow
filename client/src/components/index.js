@@ -5,6 +5,7 @@ import LocationHome from "Components/LocationHome";
 import Plant from "Components/Plant";
 import PlantEntry from "Components/PlantEntry";
 import TrackerHome from "Components/TrackerHome";
+import WaterTracker from "Components/WaterTracker";
 
 export {
   Header,
@@ -13,5 +14,6 @@ export {
   LocationHome,
   Plant,
   PlantEntry,
-  TrackerHome
+  TrackerHome,
+  WaterTracker
 };
