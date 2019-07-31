@@ -37,6 +37,38 @@ CREATE TABLE plant
     (location_id)
 );
 
+CREATE TABLE tracker
+(
+    tracker_id serial PRIMARY KEY,
+    tracker_name VARCHAR(100) NOT NULL,
+    tracker_type VARCHAR(100) NOT NULL
+)
+
+CREATE TABLE plant_record
+(
+    plant_record_id serial PRIMARY KEY,
+    plant_id serial NOT NULL,
+    tracker_id serial NOT NULL,
+    record_date DATE,
+    record_value VARCHAR(100) NOT NULL,
+    FOREIGN KEY
+    (plant_id) REFERENCES plant
+    (plant_id),
+    FOREIGN KEY
+    (tracker_id) REFERENCES tracker
+    (tracker_id)
+)
+
+insert into tracker
+    (tracker_id, tracker_name, tracker_type)
+VALUES
+    (1, 'water', 'number');
+
+insert into plant_record
+    (plant_record_id, plant_id, tracker_id, record_date, record_value)
+VALUES
+    (1, 1, 1, CURRENT_DATE - 1, "10")
+
 INSERT INTO account
     (user_id, username, email, first_name, surname, create_on, last_login)
 VALUES
