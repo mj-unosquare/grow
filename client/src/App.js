@@ -10,7 +10,7 @@ import {
   LocationHome,
   PlantEntry,
   TrackerHome,
-  WaterTracker
+  Tracker
 } from "Components";
 
 const App = () => {
@@ -26,7 +26,7 @@ const App = () => {
             <LocationEntry path={Routes.LOCATION_ENTRY} />
             <PlantEntry path={Routes.PLANT_ENTRY} />
             <TrackerHome path={Routes.TRACKER_HOME} />
-            <WaterTracker path={Routes.WATER_TRACKER} />
+            <Tracker path={Routes.TRACKER} />
           </Router>
         </Fragment>
       </ThemeProvider>

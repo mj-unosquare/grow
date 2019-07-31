@@ -149,3 +149,26 @@ UPDATE plant
 SET imageurl = 'https://images.pexels.com/photos/1122765/pexels-photo-1122765.jpeg'
 WHERE
    1=1;
+
+
+
+ALTER TABLE tracker
+ADD COLUMN description VARCHAR
+(250);
+
+ALTER TABLE tracker
+ADD COLUMN measurement VARCHAR
+(50);
+
+ALTER TABLE tracker
+ADD COLUMN imageurl VARCHAR
+(250);
+
+update tracker set description = 'you can indicate how much you watered this plant below.' where 1=1;
+update tracker set measurement = 'ml' where 1=1;
+update tracker set imageurl = 'https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/water-512.png' where 1=1;
+
+insert into tracker
+    (tracker_id, tracker_name, tracker_type, description, measurement, imageurl)
+VALUES
+    (2, 'soil pH', 'number', 'pH can affect how well a plant is able to absorb nutrients from soil', 'https://cdn4.iconfinder.com/data/icons/ios-web-user-interface-multi-circle-flat-vol-5/512/Culture_cube_lab_accessories_lab_experiment_laboratory_sample_tube_test_tube-512.png');

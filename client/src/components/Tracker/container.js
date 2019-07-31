@@ -1,22 +1,22 @@
 import React from "react";
-import { retrieveTrackers } from "Services/TrackerService";
+import { retrieveTrackerById } from "Services/TrackerService";
 
 export default Wrapped =>
   class extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        trackers: ""
+        tracker: ""
       };
     }
 
     componentDidMount() {
-      retrieveTrackers().then(response => {
+      retrieveTrackerById(this.props.id).then(response => {
+        console.log(response);
         this.setState({
-          trackers: response.data
+          tracker: response.data[0]
         });
       });
-      this.setState({ plantid: this.props.plant });
     }
 
     render() {

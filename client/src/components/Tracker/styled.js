@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const WaterLayout = styled.div`
+export const Layout = styled.div`
   height: 100%;
   list-style-type: none;
   display: flex;
@@ -43,7 +43,8 @@ export const WaterLayout = styled.div`
     flex: 0 0 45%;
     width: 100%;
     text-align: center;
-    input[type="number"] {
+    input[type="number"],
+    input[type="text"] {
       font-size: 1.5em;
       padding: 15px;
       border: none;
@@ -53,7 +54,8 @@ export const WaterLayout = styled.div`
       background-color: ${({ theme }) => theme.color.lightpink};
       border-bottom: 1px solid ${({ theme }) => theme.color.mediumbrown};
     }
-    input[type="number"]:focus {
+    input[type="number"]:focus,
+    input[type="text"]:focus {
       outline: none;
       border-bottom: 1px solid ${({ theme }) => theme.color.mediumbrown};
       background-color: white;

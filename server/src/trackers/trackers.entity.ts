@@ -8,4 +8,10 @@ export class Tracker {
   tracker_name: string;
   @Column()
   tracker_type: string;
+  @Column()
+  description: string;
+  @Column()
+  measurement: string;
+  @Column()
+  imageurl: string;
 }

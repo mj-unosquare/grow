@@ -3,6 +3,6 @@ export default {
   LOCATION_HOME: "/locations",
   LOCATION_ENTRY: "/locations/:id",
   PLANT_ENTRY: "/plants/:id",
-  TRACKER_HOME: "plants/tracker/:id",
-  WATER_TRACKER: "/plants/tracker/water/:ID"
+  TRACKER_HOME: "plants/:plant/tracker",
+  TRACKER: "/plants/:plant/tracker/:id/:date"
 };
