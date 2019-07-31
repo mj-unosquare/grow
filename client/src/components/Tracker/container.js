@@ -12,7 +12,6 @@ export default Wrapped =>
 
     componentDidMount() {
       retrieveTrackerById(this.props.id).then(response => {
-        console.log(response);
         this.setState({
           tracker: response.data[0]
         });

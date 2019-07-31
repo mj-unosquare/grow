@@ -3,7 +3,6 @@ import container from "./container";
 import { Layout } from "./styled";
 
 export const Tracker = ({ tracker }) => {
-  console.log(tracker);
   let input = <input type="text" />;
   if (tracker.tracker_type === "number") {
     input = <input type="number" name="quantity" min="1" max="1000" />;
