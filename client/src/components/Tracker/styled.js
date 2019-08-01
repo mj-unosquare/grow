@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "Theme/styled";
 
 export const Layout = styled.div`
   height: 100%;
@@ -62,6 +63,23 @@ export const Layout = styled.div`
     }
     input[type="number"]::-webkit-inner-spin-button {
       -webkit-appearance: none;
+    }
+  }
+  button {
+    margin: auto;
+    margin-top: 5%;
+    font-size: 1.5em;
+    padding: 15px;
+    background-color: ${({ theme }) => theme.color.mediumbrown};
+    color: ${({ theme }) => theme.color.lightpink};
+    border-radius: 10px;
+    border: none;
+    width: 40%;
+    flex: 0 0 45%;
+    text-align: center;
+    text-decoration: none;
+    ${device.large} {
+      margin-top: 5%;
     }
   }
 `;

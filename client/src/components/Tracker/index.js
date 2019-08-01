@@ -2,11 +2,29 @@ import React from "react";
 import container from "./container";
 import { Layout } from "./styled";
 
-export const Tracker = ({ tracker }) => {
-  let input = <input type="text" />;
+export const Tracker = ({ tracker, record, onChange, save }) => {
+  let input = (
+    <input
+      name="record_value"
+      type="text"
+      defaultValue={record.record_value}
+      onChange={onChange}
+    />
+  );
   if (tracker.tracker_type === "number") {
-    input = <input type="number" name="quantity" min="1" max="1000" />;
+    input = (
+      <input
+        name="record_value"
+        type="number"
+        name="quantity"
+        min="1"
+        max="1000"
+        defaultValue={record.record_value}
+        onChange={onChange}
+      />
+    );
   }
+
   return (
     <Layout>
       <img src={tracker.imageurl} alt="logo"></img>
@@ -16,6 +34,9 @@ export const Tracker = ({ tracker }) => {
         {input}
         {tracker.measurement}
       </form>
+      <button type="submit" onClick={save}>
+        write this down
+      </button>
     </Layout>
   );
 };
