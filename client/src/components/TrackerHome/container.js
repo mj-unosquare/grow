@@ -5,9 +5,22 @@ export default Wrapped =>
   class extends React.Component {
     constructor(props) {
       super(props);
+      this.handleDayClick = this.handleDayClick.bind(this);
+      this.formatDate = this.formatDate.bind(this);
       this.state = {
-        trackers: ""
+        trackers: "",
+        selectedDay: undefined
       };
+    }
+
+    handleDayClick(day) {
+      this.setState({ selectedDay: day });
+    }
+
+    formatDate(date) {
+      return (
+        date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate()
+      );
     }
 
     componentDidMount() {
@@ -20,6 +33,12 @@ export default Wrapped =>
     }
 
     render() {
-      return <Wrapped {...this.state} />;
+      return (
+        <Wrapped
+          {...this.state}
+          selectDay={this.handleDayClick}
+          formatDate={this.formatDate}
+        />
+      );
     }
   };

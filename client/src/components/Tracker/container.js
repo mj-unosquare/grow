@@ -15,7 +15,7 @@ export default Wrapped =>
         record: {
           plant_id: this.props.plant,
           tracker_id: this.props.id,
-          record_date: new Date(),
+          record_date: this.props.date,
           record_value: ""
         },
         create: true
@@ -36,7 +36,7 @@ export default Wrapped =>
       ).then(response => {
         if (response.data && response.data.length) {
           this.setState({
-            record: response.data[0],
+            record: response.data,
             create: false
           });
         }
