@@ -9,7 +9,7 @@ export default Wrapped =>
       this.formatDate = this.formatDate.bind(this);
       this.state = {
         trackers: "",
-        selectedDay: undefined
+        selectedDay: new Date()
       };
     }
 

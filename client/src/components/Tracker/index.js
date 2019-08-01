@@ -2,7 +2,7 @@ import React from "react";
 import container from "./container";
 import { Layout } from "./styled";
 
-export const Tracker = ({ tracker, record, onChange, save }) => {
+export const Tracker = ({ tracker, record, onChange, save, currentDate }) => {
   let input = (
     <input
       name="record_value"
@@ -27,6 +27,7 @@ export const Tracker = ({ tracker, record, onChange, save }) => {
 
   return (
     <Layout>
+      <h1>{currentDate}</h1>
       <img src={tracker.imageurl} alt="logo"></img>
       <h1>{tracker.tracker_name}</h1>
       <p>{tracker.description}</p>

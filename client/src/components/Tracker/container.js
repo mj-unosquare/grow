@@ -64,12 +64,21 @@ export default Wrapped =>
       this.state.record.record_value = value;
     };
 
+    currentDate = () => {
+      let date = new Date(this.state.record.record_date);
+      var d = date.getDate();
+      var m = date.getMonth() + 1; //Month from 0 to 11
+      var y = date.getFullYear();
+      return d + "/" + m + "/" + y;
+    };
+
     render() {
       return (
         <Wrapped
           {...this.state}
           onChange={this.handleRecordChange}
           save={this.saveRecord}
+          currentDate={this.currentDate()}
         />
       );
     }
