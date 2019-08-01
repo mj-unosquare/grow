@@ -9,17 +9,19 @@ export const LocationHome = ({ locations }) => {
       {!locations.length ? (
         <h1>no locations found</h1>
       ) : (
-        locations.map(location => {
-          return (
-            <Location
-              id={location.location_id}
-              name={location.location_name}
-              description={location.description}
-              imageurl={location.imageurl}
-              key={location.location_id}
-            />
-          );
-        })
+        locations.map(
+          ({ location_id, location_name, description, imageurl }) => {
+            return (
+              <Location
+                id={location_id}
+                name={location_name}
+                description={description}
+                imageurl={imageurl}
+                key={location_id}
+              />
+            );
+          }
+        )
       )}
     </LocationHomeLayout>
   );

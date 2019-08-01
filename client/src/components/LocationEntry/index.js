@@ -4,9 +4,10 @@ import container from "./container";
 import { LocationEntryLayout } from "./styled";
 import Plant from "Components/Plant";
 
-const LocationEntry = props => {
-  const { location_id, location_name, description, imageurl } = props.location;
-  const plants = props.plants;
+const LocationEntry = ({
+  location: { location_id, location_name, description, imageurl },
+  plants
+}) => {
   return (
     <LocationEntryLayout>
       <img src={imageurl} />
