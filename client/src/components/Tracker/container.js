@@ -36,7 +36,7 @@ export default Wrapped =>
       ).then(response => {
         if (response.data && response.data.length) {
           this.setState({
-            record: response.data,
+            record: response.data[0],
             create: false
           });
         }
@@ -52,7 +52,9 @@ export default Wrapped =>
           });
         });
       } else {
-        updateRecord(this.state.record);
+        updateRecord(this.state.record).then(response => {
+          //do nothing yet - add feedback for user here
+        });
       }
     };
 
