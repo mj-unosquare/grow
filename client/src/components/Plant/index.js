@@ -3,8 +3,7 @@ import { Link } from "@reach/router";
 import styled from "styled-components";
 import { PlantLayout } from "./styled";
 
-const Plant = props => {
-  const { id, name, description, imageurl } = props;
+const Plant = ({ id, name, description, imageurl }) => {
   const stockImg =
     "https://images.pexels.com/photos/1122765/pexels-photo-1122765.jpeg";
   return (
