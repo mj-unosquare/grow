@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "@reach/router";
 import styled from "styled-components";
 import { PlantLayout } from "./styled";
+import { Routes } from "Constants";
 
 const Plant = ({ id, name, description, imageurl }) => {
   const stockImg =
@@ -12,7 +13,7 @@ const Plant = ({ id, name, description, imageurl }) => {
       <div className="overlay">
         <h1> {name} </h1>
         <p> {description} </p>
-        <Link to={`/plants/${id}`}>grow</Link>
+        <Link to={Routes.PLANT_ENTRY.replace(":id", id)}>grow</Link>
       </div>
     </PlantLayout>
   );
