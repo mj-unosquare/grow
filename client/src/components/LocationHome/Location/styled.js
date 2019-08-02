@@ -7,8 +7,9 @@ export const LocationLayout = styled.div`
   color: white;
   border-radius: 10px;
   border: none;
-  text-decoration: none;
   flex: 0 0 95%;
+  flex-flow: column wrap;
+  position: relative;
   ${device.medium} {
     flex: 0 0 45%;
   }
@@ -31,11 +32,14 @@ export const LocationLayout = styled.div`
     padding-top: 2px;
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 80px;
     margin: 0;
+    color: white;
   }
   a {
-    float: right;
+    position: absolute;
+    right: 4px;
+    bottom: 5px;
     padding: 15px;
     margin: 2.5%;
     background-color: ${({ theme }) => theme.color.lightpink};

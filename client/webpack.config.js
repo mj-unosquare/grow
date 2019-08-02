@@ -1,6 +1,19 @@
+const webpack = require("webpack");
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const dotenv = require("dotenv");
+
+const env = dotenv.config().parsed;
+
+const envKeys = Object.keys(env).reduce((prev, next) => {
+  prev[`process.env.${next}`] = JSON.stringify(env[next]);
+  return prev;
+}, {});
+
 module.exports = {
+  output: {
+    publicPath: "/"
+  },
   module: {
     rules: [
       {
@@ -28,11 +41,15 @@ module.exports = {
       }
     ]
   },
+  devServer: {
+    historyApiFallback: true
+  },
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
-    })
+    }),
+    new webpack.DefinePlugin(envKeys)
   ],
   resolve: {
     extensions: [".js", ".jsx", ".css", ".ttf"],
@@ -41,7 +58,8 @@ module.exports = {
       Constants: path.resolve(__dirname, "src/constants/"),
       Services: path.resolve(__dirname, "src/services/"),
       Images: path.resolve(__dirname, "src/img/"),
-      Theme: path.resolve(__dirname, "src/")
+      Theme: path.resolve(__dirname, "src/"),
+      Utilities: path.resolve(__dirname, "src/utilities/")
     }
   }
 };

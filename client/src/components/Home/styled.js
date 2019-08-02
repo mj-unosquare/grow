@@ -19,7 +19,7 @@ export const HomeLayout = styled.div`
     font-size: 1.5em;
     padding: 15px;
     background-color: ${({ theme }) => theme.color.mediumbrown};
-    color: white;
+    color: ${({ theme }) => theme.color.lightpink};
     border-radius: 10px;
     border: none;
     text-decoration: none;
@@ -33,5 +33,19 @@ export const HomeLayout = styled.div`
     font-size: 2.5em;
     text-align: center;
     flex: 0 0 92%;
+  }
+  .hyperlink {
+    color: ${({ theme }) => theme.color.mediumbrown};
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+    background-color: ${({ theme }) => theme.color.lightpink};
+    border: none;
+    text-decoration: underline;
+    flex: 0 0 92%;
+    ${device.medium} {
+      margin-top: 0;
+    }
   }
 `;

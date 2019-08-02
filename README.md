@@ -4,6 +4,12 @@
 * node
 
 ## Client Setup for Development ##
+### Create .env file ###
+* Add a file called `.env` to the client directory, it should contain the following to run locally with the server:
+```
+API_URL=http://[localhost]:[3000]
+```
+### Build and run the client app ###
 ```
 cd client/
 npm install
@@ -14,7 +20,7 @@ npm run start
 ## Server Setup for Development ##
 ### Create database and add ormconfig.json file ###
 * Run the database postgresql script found in the `./db` folder
-* Add a file called `ormconfig.json` to the root directory, it should contain the following:
+* Add a file called `ormconfig.json` to the server directory, it should contain the following:
 ```
 {
   "type": "postgres",

@@ -3,17 +3,28 @@ import { Router } from "@reach/router";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { Routes } from "Constants";
 import { GlobalStyle, Theme } from "./styled";
-import { Home, LocationHome, Header } from "Components";
+import {
+  Header,
+  Home,
+  LocationEntry,
+  LocationHome,
+  PlantEntry
+} from "Components";
 
 const App = () => {
   return (
     <Fragment>
       <GlobalStyle />
       <ThemeProvider theme={Theme}>
-        <Router>
-          <Home path={Routes.HOME} />
-          <LocationHome path={Routes.LOCATION_HOME} />
-        </Router>
+        <Fragment>
+          <Header />
+          <Router>
+            <Home path={Routes.HOME} />
+            <LocationHome path={Routes.LOCATION_HOME} />
+            <LocationEntry path={Routes.LOCATION_ENTRY} />
+            <PlantEntry path={Routes.PLANT_ENTRY} />
+          </Router>
+        </Fragment>
       </ThemeProvider>
     </Fragment>
   );

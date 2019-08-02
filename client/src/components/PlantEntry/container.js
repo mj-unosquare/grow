@@ -1,19 +1,19 @@
 import React from "react";
-import { retrieveLocations } from "Services/LocationService";
+import { retrievePlantById } from "Services/PlantService";
 
 export default Wrapped =>
   class extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        locations: ""
+        plant: ""
       };
     }
 
     componentDidMount() {
-      retrieveLocations().then(response => {
+      retrievePlantById(this.props.id).then(response => {
         this.setState({
-          locations: response.data
+          plant: response.data[0]
         });
       });
     }
