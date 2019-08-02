@@ -58,7 +58,8 @@ module.exports = {
       Constants: path.resolve(__dirname, "src/constants/"),
       Services: path.resolve(__dirname, "src/services/"),
       Images: path.resolve(__dirname, "src/img/"),
-      Theme: path.resolve(__dirname, "src/")
+      Theme: path.resolve(__dirname, "src/"),
+      Utilities: path.resolve(__dirname, "src/utilities/")
     }
   }
 };
