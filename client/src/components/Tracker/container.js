@@ -1,10 +1,12 @@
 import React from "react";
+import { navigate } from "@reach/router";
 import { retrieveTrackerById } from "Services/TrackerService";
 import {
   retrieveRecordByDate,
   createRecord,
   updateRecord
 } from "Services/RecordService";
+import { Routes } from "Constants";
 
 export default Wrapped =>
   class extends React.Component {
@@ -50,10 +52,11 @@ export default Wrapped =>
             record: response.data,
             create: false
           });
+          this.props.navigate("../../");
         });
       } else {
         updateRecord(this.state.record).then(response => {
-          //do nothing yet - add feedback for user here
+          this.props.navigate("../../");
         });
       }
     };
